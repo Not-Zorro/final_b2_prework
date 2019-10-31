@@ -1,0 +1,7 @@
+<h1><%= @course.name %></h1>
+
+<% @course.students_ordered.each_with_index do |student, index| %>
+  <section id="student-<%= index %>">
+    <p><%= student.name %></p>
+  </section>
+<% end %>
