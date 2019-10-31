@@ -11,7 +11,7 @@ describe 'Student Show Page' do
       course_student_2 = student.course_students.create!(grade: 97.5, course_id: course_2.id)
       course_student_3 = student.course_students.create!(grade: 72.4, course_id: course_3.id)
 
-      visit "/students/#{student.id}"
+      visit student_path(student)
 
       expect(page).to have_content(student.name)
 
